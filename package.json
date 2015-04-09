@@ -1,0 +1,25 @@
+{
+  "name": "react-native-scrollable-mixin",
+  "version": "0.0.1",
+  "description": "Makes your scrollable React Native components conform to a standard interface, making it easier to compose components.",
+  "main": "ScrollableMixin.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/650Industries/react-native-scrollable-mixin"
+  },
+  "keywords": [
+    "react-native",
+    "scroll",
+    "scrollview",
+    "mixin",
+  ],
+  "author": "James Ide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/650Industries/react-native-scrollable-mixin/issues"
+  },
+  "homepage": "https://github.com/650Industries/react-native-scrollable-mixin"
+}
