@@ -2,6 +2,8 @@
 
 ScrollableMixin lets your scrollable React Native components conform to a standard interface, making it easier to compose components. This lets you compose different types of ScrollView-like components while preserving the `ScrollView` API, including methods like `scrollTo`.
 
+[![npm package](https://nodei.co/npm/react-native-scrollable-mixin.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-scrollable-mixin/)
+
 ## Installation
 ```
 npm install react-native-scrollable-mixin
