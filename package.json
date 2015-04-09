@@ -14,7 +14,7 @@
     "react-native",
     "scroll",
     "scrollview",
-    "mixin",
+    "mixin"
   ],
   "author": "James Ide",
   "license": "MIT",
