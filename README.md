@@ -32,10 +32,17 @@ var InfiniteScrollView = React.createClass({
     return this._scrollView.getScrollResponder();
   },
 
+  setNativeProps(props) {
+    this._scrollView.setNativeProps(props);
+  },
+
   render() {
-    var ScrollComponent = this.props.scrollViewClass;
+    var {
+      scrollComponentClass: ScrollComponent,
+      ...props
+    } = this.props;
     return (
-      <ScrollComponent {...this.props} ref={(c) => this._scrollView = c}>
+      <ScrollComponent {...props} ref={(c) => this._scrollView = c}>
         {this.props.children}
       </ScrollComponent>
     );
