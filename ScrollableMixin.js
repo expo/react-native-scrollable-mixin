@@ -12,7 +12,7 @@ var ScrollableMixin = {
   },
 
   scrollWithoutAnimationTo(destY?: number, destX?: number) {
-    this.getScrollResponder().scrollTo(destY, destX);
+    this.getScrollResponder().scrollWithoutAnimationTo(destY, destX);
   },
 };
 

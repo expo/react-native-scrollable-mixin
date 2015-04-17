@@ -21,7 +21,7 @@ var InfiniteScrollView = React.createClass({
 
   propTypes: {
     ...ScrollView.propTypes,
-    scrollComponentClass: React.PropTypes.func.isRequired,
+    renderScrollView: React.PropTypes.func.isRequired,
   },
 
   /**
@@ -38,14 +38,12 @@ var InfiniteScrollView = React.createClass({
 
   render() {
     var {
-      scrollComponentClass: ScrollComponent,
+      renderScrollView,
       ...props
     } = this.props;
-    return (
-      <ScrollComponent {...props} ref={(c) => this._scrollView = c}>
-        {this.props.children}
-      </ScrollComponent>
-    );
+    return React.cloneElement(renderScrollView(props), {
+      ref: (ref) => this._scrollView = ref,
+    });
   },
 });
 ```
@@ -58,9 +56,9 @@ By mixing in ScrollableMixin, your custom component gets the `ScrollView` API. F
 class App extends React.Component {
   render() {
     return (
-      <InfiniteScrollView
-        ref={(c) => this._scrollView = c}
-        scrollComponentClass={ListView}
+      <ListView
+        ref={(ref) => this._scrollView = ref}
+        renderScrollView={(props) => <InfiniteScrollView {...props} />}
         dataSource={...}
         renderRow={...}
       />
