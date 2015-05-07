@@ -1,7 +1,7 @@
 {
   "name": "react-native-scrollable-mixin",
   "version": "0.0.2",
-  "description": "Makes your scrollable React Native components conform to a standard interface, making it easier to compose components.",
+  "description": "A standard interface for your scrollable React Native components, making it easier to compose components.",
   "main": "ScrollableMixin.js",
   "scripts": {
     "test": "jest"
