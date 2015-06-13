@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/650Industries/react-native-scrollable-mixin"
+    "url": "https://github.com/exponentjs/react-native-scrollable-mixin"
   },
   "keywords": [
     "react-native",
@@ -19,7 +19,7 @@
   "author": "James Ide",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/650Industries/react-native-scrollable-mixin/issues"
+    "url": "https://github.com/exponentjs/react-native-scrollable-mixin/issues"
   },
-  "homepage": "https://github.com/650Industries/react-native-scrollable-mixin"
+  "homepage": "https://github.com/exponentjs/react-native-scrollable-mixin"
 }
