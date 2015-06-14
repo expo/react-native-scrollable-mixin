@@ -21,7 +21,7 @@ var InfiniteScrollView = React.createClass({
 
   propTypes: {
     ...ScrollView.propTypes,
-    renderScrollView: React.PropTypes.func.isRequired,
+    renderScrollComponent: React.PropTypes.func.isRequired,
   },
 
   /**
@@ -38,11 +38,13 @@ var InfiniteScrollView = React.createClass({
 
   render() {
     var {
-      renderScrollView,
+      renderScrollComponent,
       ...props
     } = this.props;
-    return React.cloneElement(renderScrollView(props), {
-      ref: (ref) => this._scrollView = ref,
+    return React.cloneElement(renderScrollComponent(props), {
+      ref: component => {
+        this._scrollView = component;
+      },
     });
   },
 });
@@ -57,8 +59,8 @@ class App extends React.Component {
   render() {
     return (
       <ListView
-        ref={(ref) => this._scrollView = ref}
-        renderScrollView={(props) => <InfiniteScrollView {...props} />}
+        ref={component => this._scrollView = component}
+        renderScrollView={props => <InfiniteScrollView {...props} />}
         dataSource={...}
         renderRow={...}
       />
