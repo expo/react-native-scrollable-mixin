@@ -2,7 +2,7 @@
  * @flow
  */
 
-var ScrollableMixin = {
+let ScrollableMixin = {
   getInnerViewNode(): any {
     return this.getScrollResponder().getInnerViewNode();
   },
