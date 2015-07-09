@@ -17,7 +17,7 @@ Add ScrollableMixin to your scrollable React components and implement `getScroll
 
 ## With JavaScript classes
 
-Use `Object.assign` to copy ScrollableMixin's functions to your class as static methods.
+Use `Object.assign` to copy ScrollableMixin's functions to your class's prototype as instance methods:
 
 ```js
 class InfiniteScrollView extends React.Component {
@@ -46,8 +46,8 @@ class InfiniteScrollView extends React.Component {
   }
 }
 
-// Mix in ScrollableMixin's methods as static methods
-Object.assign(InfiniteScrollView, ScrollableMixin);
+// Mix in ScrollableMixin's methods as instance methods
+Object.assign(InfiniteScrollView.prototype, ScrollableMixin);
 ```
 
 ### With `React.createClass`
