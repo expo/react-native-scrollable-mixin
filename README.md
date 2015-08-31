@@ -1,4 +1,4 @@
-# ScrollableMixin
+# ScrollableMixin [![Slack](http://slack.exponentjs.com/badge.svg)](http://slack.exponentjs.com)
 
 ScrollableMixin lets your scrollable React Native components conform to a standard interface, making it easier to compose components. This lets you compose different types of ScrollView-like components while preserving the `ScrollView` API, including methods like `scrollTo`.
 
