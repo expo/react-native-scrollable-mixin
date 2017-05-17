@@ -7,6 +7,10 @@ let ScrollableMixin = {
     this.getScrollResponder().scrollTo(destY, destX);
   },
 
+  scrollToEnd(options?: { animated?: boolean }) {
+    this.getScrollResponder().scrollToEnd(options);
+  },
+
   scrollWithoutAnimationTo(destY?: number, destX?: number) {
     this.getScrollResponder().scrollWithoutAnimationTo(destY, destX);
   },
